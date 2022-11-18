@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Activity 2</title>
+    <style>
+    hr.new1 {
+        border-top: 3px dashed red;
+      }
+    hr.new2 {
+        border-top: 3px dashed rgb(68, 0, 255);
+      }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Please enter your name: </h2>
+        <input type ="text" ng-model="nameControl">
+        <h3> Hello, {{nameControl|uppercase}}</h3>
+        <br>
+        <hr class="new1">
+    </div>
+    <div ng-init="courseinfo={Course:'BSIT', YearLevel:'3rd Year'}" >
+        <h4>
+            Course Information: {{courseinfo.Course + "-" + courseinfo.YearLevel}}
+        </h4>
+    </div>
+    <br>
+    <hr class="new2">
+    <br>
+    <div>
+        <label> Value 1: </label>
+        <input type ="number" ng-model="val1">
+        <label> Value 2: </label>
+        <input type ="number" ng-model="val2">
+        <h4>The total is: {{val1 + val2|currency:"₱ "}}</h4>
+    </div>
+</body>
+</html>
