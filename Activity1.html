@@ -7,6 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <title>Activity 2</title>
     <style>
+    hr.new0 {
+        border-top: 3px dashed rgb(31, 11, 11);
+      }
     hr.new1 {
         border-top: 3px dashed red;
       }
@@ -17,6 +20,10 @@
 </head>
 <body>
     <div>
+        <h2>Please enter your name: </h2>
+        <h3 ng-model="nameControl" ng-bind="nameControl + 'Kane Castillano'"> </h3>
+        <br>
+        <hr class="new0">
         <h2>Please enter your name: </h2>
         <input type ="text" ng-model="nameControl">
         <h3> Hello, {{nameControl|uppercase}}</h3>
